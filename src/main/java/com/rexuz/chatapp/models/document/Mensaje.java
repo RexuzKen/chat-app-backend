@@ -1,7 +1,14 @@
 package com.rexuz.chatapp.models.document;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "mensajes")
 public class Mensaje {
 
+	@Id
+	private String id;
+	
 	private String texto;
 	private Long fecha;
 	private String username;
